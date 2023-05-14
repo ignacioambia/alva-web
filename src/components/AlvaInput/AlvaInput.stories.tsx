@@ -23,10 +23,23 @@ export const Primary: Story = {
    label: 'Número de teléfono'
   },
 };
+
 export const Filled: Story = {
   args: {
-   icon: <Icon icon="tabler:face-id" />,
-   label: 'Nombre',
-   value: 'John Doe'
+    icon: <Icon icon="tabler:face-id" />,
+    label: "Nombre",
+    value: "John Doe",
+  },
+};
+
+export const WithErrors: Story = {
+  args: {
+    icon: <Icon icon="tabler:face-id" />,
+    label: "Nombre",
+    value: "Ignacio Ambia",
+    errorHandler: {
+      inputIsValid: (input: any) => input.length <= 5,
+      msg: "Nombre incompleto",
+    },
   },
 };
