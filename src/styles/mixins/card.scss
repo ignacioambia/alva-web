@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+@mixin card {
+ border: 1px solid #b4b4b4;
+ border-radius: 3px;
+ overflow: hidden;
+
+
+ &:focus,
+ &:focus-within {
+   border: 1px solid $primary;
+ }
+}

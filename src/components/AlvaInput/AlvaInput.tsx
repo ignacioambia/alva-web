@@ -12,6 +12,7 @@ export interface AlvaInputProps {
   label: string;
   value?: string;
   errorHandler?: ErrorHandler;
+  onChange?: (value: string) => any;
 }
 
 export function AlvaInput({
@@ -19,6 +20,7 @@ export function AlvaInput({
   label,
   value: originalValue,
   errorHandler,
+  onChange,
 }: AlvaInputProps) {
   const [value, setValue] = useState<string>("");
   const [withErrors, setWithErrors] = useState<boolean>(false);
@@ -29,6 +31,7 @@ export function AlvaInput({
 
   const handleInputChange = ({ target }: BaseSyntheticEvent) => {
     setValue(target.value);
+    onChange && onChange(target.value);
   };
 
   const focusElement = () => {
