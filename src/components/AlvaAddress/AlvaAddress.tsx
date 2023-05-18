@@ -14,7 +14,7 @@ enum TitleSection {
 }
 
 export function AlvaAddress() {
-  const [predictions, setPredictions] = useState<any[]>([]);
+  const [predictions, setPredictions] = useState<any[] | null>(null);
   const [value, setValue] = useState<string>("");
   const [focused, setFocused] = useState<boolean>(false);
   const containerRef = useRef<any>(null);
@@ -61,7 +61,7 @@ export function AlvaAddress() {
   return (
     <div
       ref={containerRef}
-      className={`address-container ${predictions.length ? "searching" : ""}`}
+      className={`address-container ${predictions ? "searching" : ""}`}
       onClick={focusElement}
     >
       <AlvaInput
@@ -70,7 +70,7 @@ export function AlvaAddress() {
         onChange={handleInputChange}
       />
       <div className="predictions-wrapper">
-        {focused ? predictions.map((e: any, i: number) => (
+        {focused && predictions ? predictions.map((e: any, i: number) => (
           <div key={i} className="prediction-card" onClick={() => chooseAddress(e)}>
             <div className="title">
               {getDescriptionSubstr(e.description, TitleSection.title)}
@@ -80,7 +80,7 @@ export function AlvaAddress() {
             </div>
           </div>
         )): null}
-        {!predictions.length && value.length ? (
+        {!predictions && value.length ? (
           <div className="prediction-card not-found">
             <img src={magnifyingGlass} />
             <div>No se encontró la ubicación...</div>
