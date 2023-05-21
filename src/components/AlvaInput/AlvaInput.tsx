@@ -50,11 +50,11 @@ export function AlvaInput({
   };
 
   useEffect(() => {
-    if (originalValue) {
+    if(originalValue != null){
       setValue(() => originalValue);
       checkErrors(originalValue);
     }
-  }, []);
+  }, [originalValue]);
 
   return (
     <div className={"input-container " + (withErrors ? "with-errors" : "")}>
