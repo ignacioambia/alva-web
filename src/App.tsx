@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <AlvaInput icon={<Icon icon="material-symbols:phone-enabled-sharp"/>}/>
+      <AlvaInput label="Número de telefono" icon={<Icon icon="material-symbols:phone-enabled-sharp"/>}/>
     </>
   )
 }

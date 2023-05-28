@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { AlvaInput } from "../AlvaInput/AlvaInput";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import "./AlvaAddress.scss";
@@ -51,6 +51,7 @@ export function AlvaAddress() {
   };
 
   const chooseAddress = (address: any) => {
+    address;
   }
 
   return (
