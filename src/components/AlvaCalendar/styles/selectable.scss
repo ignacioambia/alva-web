@@ -1,0 +1,27 @@
+@mixin selectable{
+ background: #f1f1f1;
+ border-radius: 5px;
+ font-family: Arial, Helvetica, sans-serif;
+ border-radius: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #5E5E5E;
+ cursor: pointer;
+ box-sizing: border-box;
+ padding: 3px 15px;
+
+ &.disabled{
+  pointer-events: none;
+  background: transparent;
+  border: 1px dashed #E5E3E3;
+  color: #E6E3E3;
+ }
+
+ &:hover:not(.selected){
+  background: rgba(85, 153, 255, 0.08)
+ }
+
+
+
+}

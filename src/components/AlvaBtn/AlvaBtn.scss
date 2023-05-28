@@ -43,6 +43,7 @@
   padding: 0px;
   box-sizing: content-box;
   position: relative;
+  width: unset;
 
   &::after{
    content: '';
@@ -62,6 +63,10 @@
 
   &.clicked::after{
    animation: icon-clicked 0.3s
+  }
+
+  &:disabled{
+   color: #E6E3E3;
   }
 
  }

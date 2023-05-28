@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+@import "../styles/selectable.scss";
+
+.alva-calendar-day-wrapper{
+ @include selectable;
+ width: 30px;
+ height: 30px;
+
+ &.is-today{
+  border: 1px dashed $primary ;
+ }
+
+ &.selected{
+  color: white;
+  background: $primary;
+  border: unset;
+ }
+
+}

@@ -1,0 +1,5 @@
+@import "../styles/selectable.scss";
+
+.alva-calendar-hour-wrapper{
+ @include selectable;
+}
