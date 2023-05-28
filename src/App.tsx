@@ -1,6 +1,5 @@
-// import { useState } from 'react'
-// import { AlvaInput } from './components/AlvaInput/AlvaInput'
-// import { Icon } from '@iconify/react';
+import { AlvaInput } from './components/AlvaInput/AlvaInput'
+import { Icon } from '@iconify/react';
 import './App.scss';
 
 function App() {
@@ -8,8 +7,7 @@ function App() {
 
   return (
     <>
-      {/* <AlvaInput label="Número de telefono" icon={<Icon icon="material-symbols:phone-enabled-sharp"/>}/> */}
-      Hola mundo!
+      <AlvaInput label="Número de telefono" icon={<Icon icon="material-symbols:phone-enabled-sharp"/>}/>
     </>
   )
 }
